@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-import { Perfil } from '../../types/Perfil.tsx';
-import { getPerfils, createPerfil, updatePerfil, deletePerfil } from '../../services/business/PerfilService.tsx';
+import Perfil from '../../../types/Perfil.tsx';
+import { getPerfils, createPerfil, updatePerfil, deletePerfil } from '../../../services/business/PerfilService.tsx';
 
 const PerfilCRUD: React.FC = () => {
 
-    const [Perfis, setPerfis] = useState<Perfil[]>([]);
-    const [nome     , setNome] = useState('');
+    const [Perfis   , setPerfis]    = useState<Perfil[]>([]);
+    const [nome     , setNome]      = useState('');
     const [descricao, setDescricao] = useState('');
-    const [estado   , setEstado] = useState('');
+    const [estado   , setEstado]    = useState('');
 
-    const [editingId, setEditingId] = useState<uuidv4 | null>(null);
+    const [editingId, setEditingId] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchPerfils = async () => {
@@ -51,7 +51,7 @@ const PerfilCRUD: React.FC = () => {
 
     return (
         <div>
-            <h1>CRUD de Perfis</h1>
+            <h1>Cadastro de Perfis</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -81,7 +81,7 @@ const PerfilCRUD: React.FC = () => {
                     <li key={Perfil.id}>
                         {Perfil.nome} - {Perfil.descricao} - {Perfil.estado}
                         <button onClick={() => handleEdit(Perfil)}>Editar</button>
-                        <button onClick={() => handleDelete(Perfil.id!)}>Deletar</button>
+                        <button onClick={() => handleDelete(Perfil.id!)}>Remover</button>
                     </li>
                 ))}
             </ul>

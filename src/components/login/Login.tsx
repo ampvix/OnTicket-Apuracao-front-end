@@ -1,8 +1,7 @@
-
 import { FaUser, FaLock } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 import "./Login.css";
 
@@ -17,7 +16,7 @@ const Login: React.FC = () => {
         e.preventDefault();
 
         // Faz o console log das credenciais do usuário
-        console.log("Dados de Login:", { email, senha});
+        console.log("Dados de login:", { email, senha});
 
         try {
             const response = await axios.post(API_URL,
@@ -59,7 +58,6 @@ const Login: React.FC = () => {
                     />
                     <FaLock className="icon" />
                 </div>
-
                 <div className="recall-forget">
                     <label>
                         <input type="checkbox" />
