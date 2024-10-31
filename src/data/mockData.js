@@ -1,5 +1,10 @@
 import { tokens } from "../theme";
 
+// type BarDatum = {
+//   country: string;
+//   [key: string]: string | number;
+// };
+
 export const mockDataTeam = [
   {
     id: 1,
