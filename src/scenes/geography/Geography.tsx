@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Header from "../../components/header/header"
-import GeographyChart from "../../components/geography/GeographyChart";
+import GeographyChart from "../../components/GeographyChart";
 import { tokens } from "../../theme";
 import { useTheme } from "@mui/material";
 

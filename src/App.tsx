@@ -4,9 +4,8 @@ import {ColorModeContext, useMode} from "./theme";
 import {ThemeProvider, Theme} from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import {Route, Routes} from "react-router-dom";
-import {Dashboard} from "@mui/icons-material";
-// import {useState} from "react";
 
+import Dashboard from "./scenes/dashboard/Dashboard";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Team from "./scenes/team/Team";
